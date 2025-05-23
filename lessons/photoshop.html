@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photoshop Darslari | GrafikDastur.uz</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+	
+  
+  <style>
+ body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* Toza oq fon */
+  color: #212529; /* Oddiy qora rang */
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #007bff; /* Bootstrap primary rangiga yaqin */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.logo:hover {
+  color: #0056b3;
+}
+
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.25rem;
+}
+
+.lesson-header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+.lesson-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.lesson-content h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.lesson-content p, .lesson-content ul {
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.lesson-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.lesson-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.lesson-content img:hover {
+  transform: scale(1.03);
+}
+
+.video-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+.video-wrapper iframe:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0,86,179,0.4);
+}
+
+.lesson-footer {
+  margin-top: 3rem;
+}
+
+footer {
+  background-color: #f1f3f5;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  border-top: 1px solid #dee2e6;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a href="../index.html" class="logo navbar-brand">GrafikDastur.uz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Bosh sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./photoshop.html">Photoshop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./illustrator.html">Illustrator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Bog‘lanish</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link" href="./about.html">Biz haqimizda</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link" href="./tests.html">Test</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container my-5 lesson-container">
+
+    <section class="container lesson-header mb-4 text-center text-md-start">
+      <h1>Adobe Photoshop asoslari</h1>
+      <p>Photoshop dasturining asosiy funksiyalari va vositalari bilan tanishing.</p>
+    </section>
+
+    <section class="container lesson-content">
+
+      <article class="mb-5">
+        <h2><b>1-dars: Photoshop interfeysi bilan tanishish</b></h2>
+        <p>
+          Photoshop oynasi dizayner va rassomlar uchun ishlash maydonidir. Unda quyidagi asosiy qismlar mavjud:
+        </p>
+        <ul>
+          <li><strong>Asboblar paneli (Tools Panel):</strong> Rasm chizish, tanlash va tahrirlash uchun kerakli vositalar.</li>
+          <li><strong>Qatlamlar oynasi (Layers Panel):</strong> Rasmning qatlamlarini boshqarish imkonini beradi.</li>
+          <li><strong>Menyu paneli:</strong> Fayl, tahrirlash, filtrlar va boshqa funksiyalarni boshqaradi.</li>
+          <li><strong>Asosiy ish maydoni:</strong> Sizning rasm va loyihangiz ko‘rsatiladi.</li>
+        </ul>
+        <img src="../assets/images/photoshop-interface.png" alt="Photoshop interfeysi" class="img-fluid" />
+      </article>
+
+      <article class="mb-5">
+        <h2><b>2-dars: Asboblar paneli (Tools Panel) bilan ishlash</b></h2>
+        <p>
+          Asboblar paneli Photoshopdagi eng muhim qism bo‘lib, quyidagi asosiy asboblar mavjud:
+        </p>
+        <ul>
+          <li><strong>Move Tool:</strong> Ob’ektlarni harakatlantirish uchun ishlatiladi.</li>
+          <li><strong>Brush Tool:</strong> Rasm chizish va bo‘yash uchun ishlatiladi.</li>
+          <li><strong>Crop Tool:</strong> Rasmni kesish va formatini o‘zgartirish uchun.</li>
+          <li><strong>Clone Stamp Tool:</strong> Rasmning bir qismini boshqa joyga ko‘chirish uchun.</li>
+          <li><strong>Text Tool:</strong> Matn qo‘shish imkonini beradi.</li>
+          <li><strong>Zoom Tool:</strong> Rasmni kattalashtirish yoki kichraytirish uchun.</li>
+        </ul>
+        <p>Har bir asbob ustiga sichqoncha olib borilganda, uning qisqacha tavsifi paydo bo‘ladi.</p>
+      </article>
+
+      <article class="mb-5">
+        <h2><b>3-dars: Rasm qatlamlari (Layers) bilan ishlash</b></h2>
+        <p>
+          Photoshopda qatlamlar (layers) rasmning turli qismlarini mustaqil boshqarish imkonini beradi. Asosiy funktsiyalari:
+        </p>
+        <ul>
+          <li>Yangi qatlam yaratish.</li>
+          <li>Qatlamlarni yashirish yoki ko‘rsatish.</li>
+          <li>Qatlamlarni guruhlash.</li>
+          <li>Qatlam opasitetini o‘zgartirish.</li>
+          <li>Qatlamlarga effektlar qo‘llash.</li>
+        </ul>
+        <p>Qatlamlar bilan ishlash rasmni tahrirlash va kompozitsiya yaratishda qulaylik beradi.</p>
+      </article>
+
+      <article class="mb-5">
+        <h2><b>4-dars: Photoshopda faylni saqlash</b></h2>
+        <p>
+          Photoshopda ishlagan ishlaringizni saqlash uchun quyidagi formatlar mavjud:
+        </p>
+        <ul>
+          <li><strong>PSD:</strong> Photoshopning o‘ziga xos formatidir, qatlamlar va barcha o‘zgartirishlarni saqlaydi.</li>
+          <li><strong>JPEG, PNG, GIF:</strong> Rasmni internet yoki chop etish uchun saqlashda ishlatiladi.</li>
+          <li><strong>TIFF:</strong> Yuqori sifatli chop etish uchun mos format.</li>
+        </ul>
+        <p>Faylni saqlashda “File” > “Save As” menyusidan foydalaning.</p>
+      </article>
+
+      <article class="mb-5">
+        <h2><b>Video dars: Photoshop bilan boshlang‘ich</b></h2>
+        <p>Quyidagi video orqali Photoshopning asosiy imkoniyatlari va interfeysi bilan yanada yaxshiroq tanishishingiz mumkin:</p>
+        <div class="video-wrapper mx-auto" style="max-width: 700px;">
+          <div class="ratio ratio-16x9">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/VPJCTwPyq38?list=PLgBB2hMr47sWBa-i7rTg5HcsNpcgWAPfM" title="Adobe photoshop 1-dars!//Yangi darslarni biz bilan boshlang!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+					<br>
+					<br>
+					<a href="https://youtu.be/VPJCTwPyq38?list=PLgBB2hMr47sWBa-i7rTg5HcsNpcgWAPfM"  class="btn btn-outline-dark mt-6">🔗 YouTube'da tomosha qilish</a>
+					
+        </div>
+      </article>
+
+    </section>
+
+    <section class="lesson-footer text-center mt-4">
+      <a href="./illustrator.html" class="btn btn-primary">Keyingi dars: Illustrator</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GrafikDastur.uz. <b>Muallif:</b> <i>Rashidov Ramazon</i> </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
