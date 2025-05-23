@@ -126,7 +126,7 @@
             <a class="nav-link" href="../index.html">Bosh sahifa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./photoshop.html">Photoshop</a>
+            <a class="nav-link" href="./photoshop.html">Photoshop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./illustrator.html">Illustrator</a>
@@ -136,6 +136,9 @@
           </li>
 					<li class="nav-item">
             <a class="nav-link" href="./about.html">Biz haqimizda</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link active" href="./tests.html">Test</a>
           </li>
         </ul>
       </div>
@@ -210,18 +213,37 @@ function createQuiz(containerId, questions) {
   let currentQuestionIndex = 0;
   let score = 0;
 
+  // 🔁 Tasodifiy tartibga aralashtirish funksiyasi
+  function shuffleArray(array) {
+    return array
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+  }
+
+  function render(html) {
+    container.innerHTML = html;
+  }
+
   function showQuestion() {
     const q = questions[currentQuestionIndex];
-    container.innerHTML = `
+
+    // 🧠 Har safar variantlarni aralashtirish
+    const shuffledOptions = shuffleArray(q.options.map((opt, i) => ({
+      text: opt,
+      index: i
+    })));
+
+    render(`
       <div class="quiz-header">${currentQuestionIndex + 1}. ${q.question}</div>
       <div class="d-grid gap-2">
-        ${q.options.map((opt, i) => `
-          <button type="button" class="btn btn-option" data-index="${i}">${opt}</button>
+        ${shuffledOptions.map((opt, i) => `
+          <button type="button" class="btn btn-option" data-index="${opt.index}">${opt.text}</button>
         `).join('')}
       </div>
       <button class="btn btn-neon btn-next" disabled>Keyingi</button>
       <div class="result"></div>
-    `;
+    `);
 
     const buttons = container.querySelectorAll('.btn-option');
     const nextBtn = container.querySelector('.btn-next');
@@ -229,11 +251,11 @@ function createQuiz(containerId, questions) {
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        if (container.querySelector('.btn-option.selected')) return; // prevent multiple selection
+        if (container.querySelector('.btn-option.selected')) return;
 
         const selectedIndex = +btn.getAttribute('data-index');
         btn.classList.add('selected');
-        
+
         if (selectedIndex === q.correct) {
           btn.classList.add('correct');
           score++;
@@ -241,11 +263,16 @@ function createQuiz(containerId, questions) {
           resultDiv.style.color = "#00b074";
         } else {
           btn.classList.add('incorrect');
-          // Show correct answer highlight
-          buttons[q.correct].classList.add('correct');
+          // ✅ Shuffled variantlar orasidan to‘g‘ri javobni topish
+          buttons.forEach(b => {
+            if (+b.getAttribute('data-index') === q.correct) {
+              b.classList.add('correct');
+            }
+          });
           resultDiv.textContent = "Noto‘g‘ri javob! ❌";
           resultDiv.style.color = "#dc3545";
         }
+
         nextBtn.disabled = false;
       });
     });
@@ -255,10 +282,10 @@ function createQuiz(containerId, questions) {
       if (currentQuestionIndex < questions.length) {
         showQuestion();
       } else {
-        container.innerHTML = `
+        render(`
           <div class="result">Test yakunlandi! Siz ${score} ta savolga to‘g‘ri javob berdingiz.</div>
           <button class="btn btn-neon restart-btn">Qayta boshlash</button>
-        `;
+        `);
         const restartBtn = container.querySelector('.restart-btn');
         restartBtn.addEventListener('click', () => {
           currentQuestionIndex = 0;
@@ -272,9 +299,10 @@ function createQuiz(containerId, questions) {
   showQuestion();
 }
 
-// Start both quizzes
+// 🔸 Ikkita testni ishga tushirish
 createQuiz('quiz-ps', photoshopQuestions);
 createQuiz('quiz-ai', illustratorQuestions);
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
