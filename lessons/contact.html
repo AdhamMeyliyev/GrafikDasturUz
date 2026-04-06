@@ -121,8 +121,8 @@
 
   <script type="text/javascript">
     (function () {
-      // Rasmdagi Public Key: JiP_4kWHccQhvsL95
-      emailjs.init("JiP_4kWHccQhvsL95")
+      // Rasmdagi Public Key: 8HGSiGN-aEBM6vP4K
+      emailjs.init("8HGSiGN-aEBM6vP4K")
     })()
 
     document.getElementById("contactForm").addEventListener("submit", function (e) {
@@ -140,13 +140,13 @@
         time: new Date().toLocaleString() // Xat kelgan vaqt
       }
 
-      // Rasmdagi Service ID: service_atgxp48
-      // Rasmdagi Template ID: template_bslr5kj
-      emailjs.send('service_atgxp48', 'template_bslr5kj', templateParams)
+      // Rasmdagi Service ID: service_0ow6u2m
+      // Rasmdagi Template ID: template_e3llw8h
+      emailjs.send('service_0ow6u2m', 'template_e3llw8h', templateParams)
         .then(function () {
           const alertBox = document.createElement("div")
           alertBox.className = "alert alert-success mt-4"
-          alertBox.textContent = "Xabaringiz Adhamning emailiga muvaffaqiyatli yuborildi!"
+          alertBox.textContent = "Xabaringiz adminga muvaffaqiyatli yuborildi!"
 
           document.getElementById("contactForm").after(alertBox)
           document.getElementById("contactForm").reset()
